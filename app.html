@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEGA MOSQUITO</title>
+    <script src="jogo.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onresize="flySize()">
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="/imagens/coracao_cheio.png" alt="coracao cheio">
+            <img id="v2" src="/imagens/coracao_cheio.png" alt="coracao cheio">
+            <img id="v3" src="/imagens/coracao_cheio.png" alt="coracao cheio">
+        </div>
+        <div class="cronometro">
+            Tempo restante: <span id="countdown"></span>
+        </div>
+    </div>
+    <script>
+    document.getElementById('countdown').innerHTML = time;
+       var createFly = setInterval( function(){
+            randomPosition()
+        }, levelTime)
+    </script>
+</body>
+</html>
